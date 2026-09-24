@@ -14,7 +14,7 @@ warnings.filterwarnings(
     module="sklearn"
 )
 def model_selection() -> tuple:
-    load_dotenv()  # busca el archivo .env y carga las variables
+    load_dotenv()  
 
     BASE_DIR = Path(os.environ["TESIS_BASE_DIR"])   
     if app_state.radio_value == True:

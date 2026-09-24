@@ -29,7 +29,7 @@ def pantalla_inicio(page: ft.Page, navigate_to) -> ft.View:
         hint_style=ft.TextStyle(color="#64748B"),
         border_color="#334155",  # Borde inicial sutil
         focused_border_color=COLOR_NEON,
-        bgcolor="#0F172A",  # Fondo interno oscuro para que no trasluzca
+        bgcolor="#0F172A",  # Fondo interno oscuro 
         border_radius=12,
         on_select=cambiar_campana,
         options=[

@@ -375,15 +375,15 @@ def pantalla_resultado(page, navigate_to):
             )
 
     async def view_classification(e):
-        # 1. Animación de carga en lo que Rasterio procesa la matriz de píxeles
+        #Animación de carga en lo que Rasterio procesa la matriz de píxeles
         e.control.disabled = True
         marco_imagen.content = ft.ProgressRing(color=COLOR_NEON)
         page.update()
 
-        # Ruta absoluta de tu TIFF
+        # Ruta absoluta 
         ruta_tiff = r"C:\Python\TESIS\app\assets\images\Imagen_Clasificada_BT_Confianza_0.8_Fina.tif"
         
-        # 2. Llamamos al motor de renderizado
+        # Motor de renderizado
         imagen_string = generar_mapa_clasificacion(ruta_tiff)
         
         if imagen_string:
@@ -395,12 +395,12 @@ def pantalla_resultado(page, navigate_to):
             )
             marco_imagen.update()
         else:
-            # Si falla el renderizado devolvemos el placeholder y avisamos
+            # Falla el renderizado 
             marco_imagen.content = imagen_resultado
             page.snack_bar = ft.SnackBar(ft.Text("No se pudo leer o procesar el archivo raster .tif"))
             page.snack_bar.open = True
 
-        # 4. Reactivamos botón y refrescamos toda la UI
+        # Reactivamos botón y refrescamos toda la UI
         e.control.disabled = False
         page.update()
 
@@ -439,7 +439,7 @@ def pantalla_resultado(page, navigate_to):
 
                         ft.Container(height=20),
 
-                        # CONTENEDOR DE IMAGEN (Asignado al componente dinámico)
+                        # CONTENEDOR DE IMAGEN 
                         marco_imagen,
 
                         ft.Container(height=15),

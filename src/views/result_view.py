@@ -28,11 +28,10 @@ def pantalla_resultado(page, navigate_to):
         content=imagen_resultado
     )
 
-    # Variable global interna de la vista para guardar el string Base64 del TIFF procesado
     mapa_base64_holder = [None]
 
     # =====================================================
-    # 🔍 FUNCIÓN PARA MOSTRAR POP-UP CON ZOOM INTERACTIVO
+    # FUNCIÓN PARA MOSTRAR POP-UP CON ZOOM INTERACTIVO
     # =====================================================
     def abrir_popup_zoom(e):
         if not mapa_base64_holder[0]:
@@ -85,7 +84,7 @@ def pantalla_resultado(page, navigate_to):
 
       page.update()
 
-      #ruta = r"C:\Python\TESIS\app\assets\images\Imagen_Clasificada_BT_Confianza_0.8_Fina.tif"
+   
       imagen_string = generar_mapa_clasificacion()
 
       if imagen_string:

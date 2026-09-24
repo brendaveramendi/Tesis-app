@@ -26,7 +26,7 @@ def generar_mapa_clasificacion():
         cmap_cultivos = ListedColormap(colores)
         cmap_cultivos.set_bad(color="white", alpha=1.0)
         
-        # Subimos levemente el DPI a 140 para que al hacer zoom en el Pop-up no se pixelee la leyenda
+        # DPI
         fig, ax = plt.subplots(figsize=(6, 6), dpi=600)
         
         ax.imshow(clasificacion, cmap=cmap_cultivos, vmin=0, vmax=len(colores)-1,interpolation='nearest')
@@ -49,7 +49,7 @@ def generar_mapa_clasificacion():
                 mpatches.Patch(color='#7e7e7e', label='Urbano') 
             ]
        
-        # Ajuste fino de la caja de la leyenda afuera de los ejes del mapa raster
+        # Caja de la leyenda afuera de los ejes del mapa raster
         ax.legend(handles=leyenda_elementos, loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=8)
         ax.axis('off') 
         plt.tight_layout()

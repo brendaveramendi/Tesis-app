@@ -86,7 +86,7 @@ def pantalla_upload(page: ft.Page, navigate_to):
         page.update()
 
         try:
-            # hilo secundario
+            
             await asyncio.to_thread(image_classification, on_progress=notificar_flet)
 
             # Cerrar 
